@@ -1,3 +1,5 @@
+// Write a recursive function called reverse which accepts a string
+// and returns a new string in reverse.
 function reverse(str){
   if(str.length === 1){
     return str;
@@ -7,6 +9,9 @@ function reverse(str){
   }
 }
 
+// Write a recursive function called isPalindrome 
+// which returns true if the string passed to it is a palindrome 
+// (reads the same forward and backward). Otherwise it returns false.
 function isPalindrome(str){ 
   if(str.length <= 1) {
     return true;
@@ -19,6 +24,10 @@ function isPalindrome(str){
   }
 }
 
+// Write a recursive function called someRecursive 
+// which accepts an array and a callback. The function returns true 
+// if a single value in the array returns true when passed to the callback. 
+// Otherwise it returns false.
 function someRecursive(arr,callback){
   console.log(arr);
   if (arr.length === 0) {
@@ -33,6 +42,9 @@ function someRecursive(arr,callback){
   }
 }
 
+// Write a recursive function called flatten which accepts an array of arrays 
+// and returns a new array with all values flattened.
+
 function flatten(arr){
   var finalArray = [];
 
@@ -46,8 +58,6 @@ function flatten(arr){
     }
   }
 }
-
-const isOdd = val => val % 2 !== 0;
 
 console.log(reverse('Awesome'));
 console.log(isPalindrome('tacocat'));
