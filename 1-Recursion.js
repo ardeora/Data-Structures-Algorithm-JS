@@ -44,25 +44,27 @@ function someRecursive(arr,callback){
 
 // Write a recursive function called flatten which accepts an array of arrays 
 // and returns a new array with all values flattened.
-
 function flatten(arr){
   var finalArray = [];
 
   function helper(arr) {
-    if (!Array.isArray(arr)) {
-      return finalArray.push(arr);
-    } else {
-      if (arr) {
-        
+    for (let i = 0; i < arr.length; i++) {
+      if (Array.isArray(arr[i])) {
+        helper(arr[i])
+      } else {
+        finalArray.push(arr[i]);
       }
     }
   }
+
+  helper(arr);
+  return finalArray;
 }
 
 console.log(reverse('Awesome'));
 console.log(isPalindrome('tacocat'));
 console.log(someRecursive([11,6,8], val => val < 10));
-
+console.log(flatten([1,2,3,[4,5],[6,7]]));
 
 
 
