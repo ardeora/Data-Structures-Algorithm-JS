@@ -18,3 +18,4 @@ function binarySearch(arr, val) {
 }
 console.log(binarySearch([1,3,7,12,16,24,67,96,102,201,231], 24));
 
+shbx
